@@ -19,3 +19,10 @@ $handle = fopen('path/to/file.csv', "r");
 $finder = new CsvDelimiterFinder($handle);
 $delimiter = $finder->findDelimiter();
 ```
+
+You may optionally override the default set of delimiters that it checks for by using the setDelimiters() method:
+
+```php
+$custom_delimiters = [',',';','|',"\t"];
+$finder->setDelimiters($custom_delimiters);
+```
